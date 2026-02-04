@@ -69,6 +69,37 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://kilernen.de/#organization",
+      name: "KI Lernen",
+      url: "https://kilernen.de",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://kilernen.de/logo.png",
+        width: 512,
+        height: 512,
+      },
+      description:
+        "Deine #1 Lernplattform für KI-Skills. Zertifizierte Online-Kurse für KI-Automatisierung, Prompt Engineering, Voice Agents und mehr.",
+      sameAs: [],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kilernen.de/#website",
+      url: "https://kilernen.de",
+      name: "KI Lernen",
+      publisher: {
+        "@id": "https://kilernen.de/#organization",
+      },
+      inLanguage: "de-DE",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,6 +107,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className="dark">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col`}
       >
