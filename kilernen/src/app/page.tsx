@@ -279,7 +279,7 @@ export default function HomePage() {
           </FadeIn>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <StaggerItem key={feature.title}>
                 <ScaleOnHover>
                   <Card className="text-center p-8 h-full group hover:border-[var(--accent-gold)]/30 transition-all duration-500">
