@@ -1,0 +1,64 @@
+Ich soll eine Plattform, wie "https://www.business.de/" aufbauen.
+
+Instruktionen:
+
+@Damjan Savić das Projekt können wir jetzt doch asap starten. Weitere Infos folgen
+https://www.business.de
+Wir wollen mit kilernen.de eine Schulungsplattform ählich wie diese hier bauen. Nur bei uns geht alle ausschließlich um KI
+Auf der Plattform werden wir viele verschiedene Kurse anbieten. Ein Kurs ist bereits fertig. Andere sollen als Coming Soon angeteasert werden. Wir brauchen eine Stripe Anbindung, dass man direkt über die Plattform zahlen kann. Es soll hervorgehoben werden, dass alle Kurse zertifiziert sind, also die Teilnehmer ein Zertifikat erhalten
+
+---
+
+TechStack:
+* Next.js 16.1
+* React 19.2
+* TypeScript 5.9.3
+* Tailwind CSS 3.4.19
+
+Auch alle Packages auf der neuesten Version installieren.
+
+---
+
+Fokus:
+* https://www.business.de/ als Orientierung
+* Analysiere die gesamte Seite per Playwright und übersetze sie in das Design von Everlast, mit einem deutlich moderneren, cleaneren und smootheren Design.
+* Auf KI bezogen
+
+---
+
+Gib mir dafür detaillierte Instruktionen für Claude Code aus.
+Führe im Vorfeld eine Recherche durch.
+Im Anschluss möchte ich Schritt für Schritt die folgenden Funktionalitäten implementieren:
+* Design System per Pencil.dev in VS Code
+
+---
+
+Tokens:
+## 🔑 Credentials & Tokens (Klartext)
+> **WARNUNG:** Diese Tokens sind Test-Tokens und werden nach der Session revoked.
+
+VERCEL:
+  token: "TexLoDHoBrhOrJX2nmVWwRMT"
+  team: null  # Personal Account
+  command: "npx vercel --prod --yes --token=TexLoDHoBrhOrJX2nmVWwRMT"
+GITHUB:
+  user: "damjan1996"
+  auth: "bereits via gh auth login authentifiziert"
+  visibility: "private"
+PAGESPEED_INSIGHTS:
+  api_key: null  # Kein API-Key noetig fuer oeffentliche Abfragen
+  fallback_url: "https://pagespeed.web.dev/analysis?url="
+
+Einfach im Klartext in die Instruktionen einsetzen.
+
+---
+
+Fülle das gesamte Formular aus, wie wir die Seite aufbauen können.
+kilernen.de
+
+---
+
+Das Everlast-Styling ist eingefügt, als everlast.pen.
+
+Auch hier:
+https://everlastcareer.site/
