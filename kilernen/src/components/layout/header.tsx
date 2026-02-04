@@ -27,10 +27,11 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50",
+        "transition-[background-color,box-shadow] duration-300 ease-out",
         isScrolled
-          ? "bg-[var(--background-primary)] backdrop-blur-md shadow-lg shadow-black/20 border-b border-[var(--border-subtle)]"
-          : "bg-transparent"
+          ? "bg-[#0a0a0a] shadow-[0_1px_0_0_#262626,0_4px_12px_rgba(0,0,0,0.5)]"
+          : "bg-transparent shadow-none"
       )}
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
