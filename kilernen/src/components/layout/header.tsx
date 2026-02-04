@@ -29,7 +29,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[var(--background-primary)]/90 backdrop-blur-lg border-b border-[var(--border-subtle)]"
+          ? "bg-[var(--background-primary)] backdrop-blur-md shadow-lg shadow-black/20 border-b border-[var(--border-subtle)]"
           : "bg-transparent"
       )}
     >
