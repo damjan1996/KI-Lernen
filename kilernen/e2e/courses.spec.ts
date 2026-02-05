@@ -1,141 +1,266 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Courses", () => {
-  test.describe("Course Listing Page", () => {
-    test("displays all courses", async ({ page }) => {
-      await page.goto("/kurse");
-
-      // Page should load
-      await expect(page.locator("h1")).toBeVisible();
-
-      // Should show the 4 courses
-      const courseCards = page.locator('[href^="/kurse/"]').filter({ hasText: /.+/ });
-      await expect(courseCards.first()).toBeVisible();
-    });
-
-    test("displays available course badge", async ({ page }) => {
-      await page.goto("/kurse");
-
-      // KI-Automatisierung should have available badge
-      await expect(page.getByText("JETZT VERFÜGBAR")).toBeVisible();
-    });
-
-    test("displays coming soon badges", async ({ page }) => {
-      await page.goto("/kurse");
-
-      // Multiple courses should have coming soon badges
-      const comingSoonBadges = page.getByText("BALD VERFÜGBAR");
-      await expect(comingSoonBadges.first()).toBeVisible();
-    });
-
-    test("course card navigates to detail page", async ({ page }) => {
-      await page.goto("/kurse");
-
-      // Click on KI-Automatisierung course
-      const courseLink = page.getByRole("link", { name: /KI-Automatisierung/i }).first();
-      await courseLink.click();
-
-      // Should navigate to course detail page
-      await expect(page).toHaveURL("/kurse/ki-automatisierung");
-    });
+test.describe("Courses Listing Page", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/kurse");
   });
 
-  test.describe("Course Detail Page - Available Course", () => {
-    test.beforeEach(async ({ page }) => {
+  test("should display page title and description", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: /Wähle deinen/i })).toBeVisible();
+    await expect(page.getByText("Zertifizierte Online-Kurse")).toBeVisible();
+    await expect(page.getByText(/praxisnahen Kurse/i)).toBeVisible();
+  });
+
+  test("should display available courses section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Jetzt verfügbar" })).toBeVisible();
+  });
+
+  test("should display available course cards with details", async ({ page }) => {
+    // Check KI-Automatisierung course (available course)
+    const courseCard = page.locator("article, .card, [class*='Card']").filter({
+      hasText: "KI-Automatisierung Masterclass",
+    });
+
+    await expect(courseCard.first()).toBeVisible();
+
+    // Course should display price
+    await expect(page.getByText("€997")).toBeVisible();
+
+    // Course should display metadata
+    await expect(page.getByText("12+ Stunden")).toBeVisible();
+    await expect(page.getByText("30 Lektionen")).toBeVisible();
+
+    // Course should have link to detail page
+    const courseLink = page.locator("a[href='/kurse/ki-automatisierung']");
+    await expect(courseLink.first()).toBeVisible();
+  });
+
+  test("should display course features", async ({ page }) => {
+    // Check for common features in course cards
+    await expect(page.getByText("Offizielles Zertifikat").first()).toBeVisible();
+    await expect(page.getByText("Lebenslanger Zugang").first()).toBeVisible();
+  });
+
+  test("should display coming soon courses section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Bald verfügbar" })).toBeVisible();
+  });
+
+  test("should display coming soon course cards", async ({ page }) => {
+    // Check for coming soon courses
+    await expect(page.getByText("Prompt Engineering Pro")).toBeVisible();
+    await expect(page.getByText("Voice Agent Development")).toBeVisible();
+    await expect(page.getByText("RAG & LLM Implementierung")).toBeVisible();
+  });
+
+  test("should display disabled button for coming soon courses", async ({ page }) => {
+    const comingSoonButtons = page.getByRole("button", { name: "Bald verfügbar" });
+    const buttonCount = await comingSoonButtons.count();
+    expect(buttonCount).toBeGreaterThan(0);
+
+    // First coming soon button should be disabled
+    await expect(comingSoonButtons.first()).toBeDisabled();
+  });
+
+  test("should navigate to course detail page when clicking course link", async ({ page }) => {
+    const courseLink = page.getByRole("link", { name: /Zum Kurs/i }).first();
+    await courseLink.click();
+    await expect(page).toHaveURL(/\/kurse\/.+/);
+  });
+
+  test("should display newsletter section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Kein Kurs verpassen" })).toBeVisible();
+    await expect(page.getByPlaceholder("Deine E-Mail-Adresse")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Anmelden" })).toBeVisible();
+  });
+});
+
+test.describe("Course Detail Page - Available Course", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/kurse/ki-automatisierung");
+  });
+
+  test("should display course title and badge", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "KI-Automatisierung Masterclass" })).toBeVisible();
+    await expect(page.getByText("JETZT VERFÜGBAR")).toBeVisible();
+  });
+
+  test("should display course subtitle and description", async ({ page }) => {
+    await expect(page.getByText("Transformiere Unternehmen mit intelligenter Automatisierung")).toBeVisible();
+    await expect(page.getByText(/n8n, Make und Claude AI/)).toBeVisible();
+  });
+
+  test("should display course metadata", async ({ page }) => {
+    await expect(page.getByText("12+ Stunden")).toBeVisible();
+    await expect(page.getByText("30 Lektionen")).toBeVisible();
+    await expect(page.getByText("Zertifikat")).toBeVisible();
+  });
+
+  test("should display price and CTA button", async ({ page }) => {
+    await expect(page.getByText("€997").first()).toBeVisible();
+    await expect(page.getByRole("link", { name: /Jetzt für €997 kaufen/i }).first()).toBeVisible();
+    await expect(page.getByText("14-Tage Geld-zurück-Garantie").first()).toBeVisible();
+  });
+
+  test("should display course features list", async ({ page }) => {
+    await expect(page.getByText("30+ Video-Lektionen")).toBeVisible();
+    await expect(page.getByText("Praxis-Projekte zum Mitmachen")).toBeVisible();
+    await expect(page.getByText("Vorlagen & Templates")).toBeVisible();
+    await expect(page.getByText("Community-Zugang").first()).toBeVisible();
+    await expect(page.getByText("Offizielles Zertifikat")).toBeVisible();
+  });
+
+  test("should display course description section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Über diesen Kurs" })).toBeVisible();
+    await expect(page.getByText(/umfassenden Masterclass/)).toBeVisible();
+  });
+
+  test("should display course modules/content", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Kursinhalt" })).toBeVisible();
+    await expect(page.getByText("Grundlagen der Automatisierung")).toBeVisible();
+    await expect(page.getByText("n8n Masterclass")).toBeVisible();
+    await expect(page.getByText("Make (Integromat) Deep Dive")).toBeVisible();
+    await expect(page.getByText("KI-Integration")).toBeVisible();
+    await expect(page.getByText("Kundengewinnung & Business")).toBeVisible();
+  });
+
+  test("should display module lessons", async ({ page }) => {
+    await expect(page.getByText("Einführung in die KI-Automatisierung")).toBeVisible();
+    await expect(page.getByText("n8n Installation und Setup")).toBeVisible();
+  });
+
+  test("should display benefits section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Das bekommst du" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Lebenslanger Zugang" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Kostenlose Updates" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Community-Zugang" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Geld-zurück-Garantie" })).toBeVisible();
+  });
+
+  test("should display testimonials section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Das sagen unsere Teilnehmer" })).toBeVisible();
+    await expect(page.getByText("Michael S.")).toBeVisible();
+    await expect(page.getByText("Sarah K.")).toBeVisible();
+    await expect(page.getByText("Thomas B.")).toBeVisible();
+  });
+
+  test("should display FAQ section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Häufig gestellte Fragen" })).toBeVisible();
+    await expect(page.getByText("Brauche ich Programmierkenntnisse?")).toBeVisible();
+    await expect(page.getByText("Wie lange habe ich Zugang zum Kurs?")).toBeVisible();
+    await expect(page.getByText("Gibt es eine Geld-zurück-Garantie?")).toBeVisible();
+    await expect(page.getByText("Erhalte ich ein Zertifikat?")).toBeVisible();
+    await expect(page.getByText("Kann ich Fragen stellen?")).toBeVisible();
+  });
+
+  test("should display final CTA section", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Bereit durchzustarten?" })).toBeVisible();
+    await expect(page.getByText(/Sichere dir jetzt deinen Zugang/)).toBeVisible();
+  });
+
+  test("should have checkout link", async ({ page }) => {
+    const checkoutLink = page.locator("a[href='/checkout/ki-automatisierung']").first();
+    await expect(checkoutLink).toBeVisible();
+  });
+});
+
+test.describe("Course Detail Page - Coming Soon Course", () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto("/kurse/prompt-engineering");
+  });
+
+  test("should display course title and coming soon badge", async ({ page }) => {
+    await expect(page.getByRole("heading", { name: "Prompt Engineering Pro" })).toBeVisible();
+    await expect(page.getByText("BALD VERFÜGBAR")).toBeVisible();
+  });
+
+  test("should display course description", async ({ page }) => {
+    await expect(page.getByText("Meistere die Kunst der KI-Kommunikation")).toBeVisible();
+  });
+
+  test("should display disabled CTA button", async ({ page }) => {
+    const comingSoonButton = page.getByRole("button", { name: "Bald verfügbar" });
+    await expect(comingSoonButton).toBeVisible();
+    await expect(comingSoonButton).toBeDisabled();
+  });
+
+  test("should not display price or checkout link", async ({ page }) => {
+    // Coming soon courses should not have checkout links
+    const checkoutLink = page.locator("a[href='/checkout/prompt-engineering']");
+    await expect(checkoutLink).toHaveCount(0);
+  });
+
+  test("should display course features", async ({ page }) => {
+    await expect(page.getByText("Fortgeschrittene Techniken")).toBeVisible();
+    await expect(page.getByText("System Prompts meistern")).toBeVisible();
+    await expect(page.getByText("Chain-of-Thought Prompting")).toBeVisible();
+  });
+});
+
+test.describe("Course Page - 404 Handling", () => {
+  test("should show 404 for non-existent course", async ({ page }) => {
+    const response = await page.goto("/kurse/non-existent-course");
+
+    // Should return 404 status
+    expect(response?.status()).toBe(404);
+  });
+});
+
+test.describe("Course Navigation Flow", () => {
+  test("should navigate from listing to detail and back", async ({ page }) => {
+    await page.goto("/kurse");
+
+    // Click on a course
+    await page.getByRole("link", { name: /Zum Kurs/i }).first().click();
+    await expect(page).toHaveURL("/kurse/ki-automatisierung");
+
+    // Navigate back to listing via header
+    await page.locator("header").getByRole("link", { name: "Kurse" }).first().click();
+    await expect(page).toHaveURL("/kurse");
+  });
+
+  test("should navigate between different course pages", async ({ page }) => {
+    // Start at KI-Automatisierung
+    await page.goto("/kurse/ki-automatisierung");
+    await expect(page.getByRole("heading", { name: "KI-Automatisierung Masterclass" })).toBeVisible();
+
+    // Go back to listing
+    await page.goto("/kurse");
+
+    // Navigate to another course detail via URL
+    await page.goto("/kurse/prompt-engineering");
+    await expect(page.getByRole("heading", { name: "Prompt Engineering Pro" })).toBeVisible();
+  });
+});
+
+test.describe("Responsive Course Display", () => {
+  test.describe("Mobile View", () => {
+    test.use({ viewport: { width: 375, height: 667 } });
+
+    test("should display courses in single column on mobile", async ({ page }) => {
+      await page.goto("/kurse");
+
+      // Page should still be functional
+      await expect(page.getByRole("heading", { name: /Wähle deinen/i })).toBeVisible();
+      await expect(page.getByText("KI-Automatisierung Masterclass")).toBeVisible();
+    });
+
+    test("should display course detail page on mobile", async ({ page }) => {
       await page.goto("/kurse/ki-automatisierung");
-    });
 
-    test("displays course title and subtitle", async ({ page }) => {
-      await expect(page.locator("h1")).toContainText("KI-Automatisierung");
-    });
-
-    test("displays course modules", async ({ page }) => {
-      // Should show module sections
-      await expect(page.getByText("Grundlagen der Automatisierung")).toBeVisible();
-      await expect(page.getByText("n8n Masterclass")).toBeVisible();
-    });
-
-    test("displays course features", async ({ page }) => {
-      // Should show features like lessons count, certificate, etc.
-      await expect(page.getByText(/Video-Lektionen/i)).toBeVisible();
-      await expect(page.getByText(/Zertifikat/i)).toBeVisible();
-    });
-
-    test("displays CTA button", async ({ page }) => {
-      // Should have a CTA to start the course
-      const ctaButton = page.getByRole("link", { name: /starten|kaufen|buchen/i }).first();
-      await expect(ctaButton).toBeVisible();
-    });
-
-    test("displays price", async ({ page }) => {
-      // Should show the price
-      await expect(page.getByText(/997/)).toBeVisible();
-    });
-
-    test("displays instructor information", async ({ page }) => {
-      await expect(page.getByText("KI Lernen Team")).toBeVisible();
-    });
-
-    test("displays testimonials", async ({ page }) => {
-      // Should show testimonial names
-      await expect(page.getByText("Michael S.")).toBeVisible();
-    });
-
-    test("displays FAQ section", async ({ page }) => {
-      await expect(page.getByText("Brauche ich Programmierkenntnisse?")).toBeVisible();
+      await expect(page.getByRole("heading", { name: "KI-Automatisierung Masterclass" })).toBeVisible();
+      await expect(page.getByText("€997").first()).toBeVisible();
+      await expect(page.getByRole("link", { name: /Jetzt für €997 kaufen/i }).first()).toBeVisible();
     });
   });
 
-  test.describe("Course Detail Page - Coming Soon Course", () => {
-    test("displays coming soon status for prompt engineering", async ({ page }) => {
-      await page.goto("/kurse/prompt-engineering");
+  test.describe("Tablet View", () => {
+    test.use({ viewport: { width: 768, height: 1024 } });
 
-      await expect(page.locator("h1")).toContainText("Prompt Engineering");
-      await expect(page.getByText("BALD VERFÜGBAR")).toBeVisible();
-    });
+    test("should display courses listing on tablet", async ({ page }) => {
+      await page.goto("/kurse");
 
-    test("displays coming soon status for voice agents", async ({ page }) => {
-      await page.goto("/kurse/voice-agents");
-
-      await expect(page.locator("h1")).toContainText("Voice Agent");
-      await expect(page.getByText("BALD VERFÜGBAR")).toBeVisible();
-    });
-
-    test("displays coming soon status for RAG/LLM", async ({ page }) => {
-      await page.goto("/kurse/rag-llm");
-
-      await expect(page.locator("h1")).toContainText("RAG");
-      await expect(page.getByText("BALD VERFÜGBAR")).toBeVisible();
-    });
-  });
-
-  test.describe("Course Discovery from Homepage", () => {
-    test("homepage shows course section", async ({ page }) => {
-      await page.goto("/");
-
-      // Should have courses section or course cards on homepage
-      const courseSection = page.locator("section").filter({ hasText: /Kurs/i });
-      await expect(courseSection.first()).toBeVisible();
-    });
-
-    test("can navigate from homepage to courses", async ({ page }) => {
-      await page.goto("/");
-
-      // Click a link to courses
-      const coursesLink = page.getByRole("link", { name: /Kurse/i }).first();
-      await coursesLink.click();
-
-      // Should be on courses page
-      await expect(page).toHaveURL(/\/kurse/);
-    });
-  });
-
-  test.describe("404 Handling", () => {
-    test("non-existent course shows 404", async ({ page }) => {
-      const response = await page.goto("/kurse/non-existent-course");
-
-      // Should return 404 or show not found content
-      expect(response?.status()).toBe(404);
+      await expect(page.getByRole("heading", { name: /Wähle deinen/i })).toBeVisible();
+      await expect(page.getByText("KI-Automatisierung Masterclass")).toBeVisible();
     });
   });
 });
