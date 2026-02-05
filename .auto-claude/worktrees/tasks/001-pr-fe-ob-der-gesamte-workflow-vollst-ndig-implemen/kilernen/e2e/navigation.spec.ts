@@ -61,7 +61,7 @@ test.describe("Header Navigation", () => {
   });
 
   // Skip on mobile - scroll behavior varies by viewport and page content height
-  test("should change header background on scroll", async ({ page, browserName }) => {
+  test("should change header background on scroll", async ({ page }) => {
     // This test is flaky on mobile viewports due to page height constraints
     const viewport = await page.viewportSize();
     if ((viewport?.width ?? 1024) < 768) {
