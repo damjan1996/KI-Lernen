@@ -1,0 +1,277 @@
+Alle Produkte
+
+Everlast KI-Beratung Voice Agent Starter
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt Einrichtung von KI-Telefonassistenten (AI Voice Agents)
+- Technisches Onboarding zur Orientierung und Freischaltung (1zu1, ca. 15min)
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Persönlicher Chat-Support über den Messenger-Dienst Slack in diversen themenspezifischen Gruppen
+- Persönliche Live-Beratung in der Gruppe mit KI-Entwicklern und Senior AI Consultants mit bis zu 3 Calls pro Woche zu den wichtigsten Themen in der Implementierung von AI-Automations. 
+Unter Anderem:
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), um präzise und effektive Antworten des AI Voice Agents sicherzustellen
+- Integration des AI Voice Agents in bestehende Systeme wie Telefonie, CRM und andere IT-Infrastrukturen
+- Erstellung individueller Funktionen und Workflows (Custom Functions)
+- Einrichtung und Nutzung von API-Schnittstellen zur Verbindung der Voice Agents mit weiteren Unternehmensanwendungen
+- Design und Optimierung natürlicher und intuitiver Dialogstrukturen für ein verbessertes Kundenerlebnis
+- Identifikation und Behebung technischer Probleme (Troubleshooting), um eine reibungslose Funktion des Voice Agents zu gewährleisten
+- Vermittlung von Wissen und Schulung, um die langfristige Nutzung und Pflege des AI Voice Agents sicherzustellen
+- Grundlagen Rechtliches und DSGVO-konformes Setup
+- Unterstützung bei der Einbindung und Nutzung von Best Practices, Vorlagen und erprobten Frameworks für eine effektive Implementierung
+- Dieses Angebot beinhaltet einen Zugang für den Geschäftsführer (Mitarbeiter-Zugänge sind nicht enthalten)
+
+Everlast KI-Beratung Voice Agent Pro
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt AI-Automations und Einrichtung von KI-Telefonassistenten (AI Voice Agents)
+- Strategisches Onboarding zur Erstellung einer individuellen Roadmap (1zu1, ca. 60min)
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Premium Support (Private Chatgruppe) mit den Beratern zur Klärung persönlicher Fragen via Slack
+- Persönlicher Joure Fixe Call (einmal pro Monat, ca. 60min) mit deinem persönlichen Account Manager zur Klärung offener Fragen und individuellen Anpassung sowie laufender Iteration der besprochenen Methoden (falls notwendig und gewünscht)
+- Persönliche Live-Beratung in der Gruppe mit KI-Entwicklern und Senior AI Consultants mit bis zu 3 Calls pro Woche zu den wichtigsten Themen in der Implementierung von AI-Automations. 
+Unter Anderem:
+- Klärung allgemeiner & strategischer Fragen im Bereich AI-Automations
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), um präzise und effektive Antworten von AI Voice Agents sicherzustellen
+- Integration des AI Voice Agents in bestehende Systeme wie Telefonie, CRM und andere IT-Infrastrukturen
+- Erstellung individueller Funktionen und Workflows (Custom Functions)
+- Einrichtung und Nutzung von API-Schnittstellen zur Verbindung der Voice Agents mit weiteren Unternehmensanwendungen
+- Design und Optimierung natürlicher und intuitiver Dialogstrukturen für ein verbessertes Kundenerlebnis
+- Identifikation und Behebung technischer Probleme (Troubleshooting), um eine reibungslose Funktion des Voice Agents zu gewährleisten
+- Vermittlung von Wissen und Schulung, um die langfristige Nutzung und Pflege des AI Voice Agents sicherzustellen
+- Grundlagen Rechtliches und DSGVO-konformes Setup
+- Unterstützung bei der Einbindung und Nutzung von Best Practices, Vorlagen und erprobten Frameworks für eine effektive Implementierung
+- Dieses Angebot beinhaltet einen Zugang für den Geschäftsführer (Mitarbeiter-Zugänge sind nicht enthalten)
+
+Everlast KI-Beratung Voice Agent Master
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt AI-Automations und Einrichtung von KI-Telefonassistenten (AI Voice Agents)
+- Strategisches Onboarding zur Erstellung einer individuellen Roadmap (1zu1, ca. 60min)
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Zugang für bis zu 4 weitere Mitarbeiter bzw. Geschäftspartner
+- Premium Support (Private Chatgruppe) mit den Beratern zur Klärung persönlicher Fragen
+- Persönlicher Joure Fixe Call (einmal pro Monat, ca. 60min) mit deinem persönlichen Account Manager zur Klärung offener Fragen und individuellen Anpassung sowie laufender Iteration der besprochenen Methoden (falls notwendig und gewünscht)
+- Persönliche Live-Beratung in der Gruppe mit KI-Entwicklern und Senior AI Consultants mit bis zu 3 Calls pro Woche zu den wichtigsten Themen in der Implementierung von AI-Automations. 
+- Klärung allgemeiner & strategischer Fragen im Bereich AI-Automations
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), um präzise und effektive Antworten von AI Voice Agents sicherzustellen
+- Integration des AI Voice Agents in bestehende Systeme wie Telefonie, CRM und andere IT-Infrastrukturen
+- Erstellung individueller Funktionen und Workflows (Custom Functions)
+- Einrichtung und Nutzung von API-Schnittstellen zur Verbindung der Voice Agents mit weiteren Unternehmensanwendungen
+- Design und Optimierung natürlicher und intuitiver Dialogstrukturen für ein verbessertes Kundenerlebnis
+- Identifikation und Behebung technischer Probleme (Troubleshooting), um eine reibungslose Funktion des Voice Agents zu gewährleisten
+- Vermittlung von Wissen und Schulung, um die langfristige Nutzung und Pflege des AI Voice Agents sicherzustellen
+- Grundlagen Rechtliches und DSGVO-konformes Setup
+- Unterstützung bei der Einbindung und Nutzung von Best Practices, Vorlagen und erprobten Frameworks für eine effektive Implementierung
+
+Everlast KI-Agentur Starter
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt Agenturaufbau, Marketing, Kundengewinnung & KI-Implementierung
+- Strategisches Onboarding zur Erarbeitung einer individuellen Strategie (1zu1)
+- Persönlicher Chat-Support über den Messenger-Dienst Slack in diversen themenspezifischen Gruppen
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Bonus: Zugang zum „AI Automations” Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten speziell zu technischen und strategischen Themen im Bereich der KI-Automatisierungen, wie die Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), Erstellung individueller Funktionen und Workflows (Custom Functions) mit iPaaS-Tools wie Make.com und n8n, Implementierung von KI Use Cases wie AI Voice Agents, uvm.
+- Persönliches Live-Strategie-Sparring in der Community mit bis zu 10 Calls pro Woche, je nach Bedarf und individuellen Geschäftsherausforderungen
+- Themen werden von den Teilnehmenden eingebracht und situativ diskutiert, darunter:
+- Positionierung, Agenturaufbau, Marketing & Sales
+- Feinjustierung von Positionierung und Angebotsgestaltung
+- Social-Media-Ausbau, Reichweite- und Sichtbarkeits­fragen
+- Impulse zu ganzheitlichem Marketing & Leadgenerierungs-Strategien
+- Praxisfeedback zu Content-Gestaltung und -Ideen, Marktanalyse und Technik-Setup
+- Holistisches Verkaufen zur planbaren Gewinnung von Neukunden
+- Klärung unternehmerischer Grundlagen- und Alltagsthemen
+
+
+Everlast KI-Agentur Kickstart Pro
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt Agenturaufbau, Marketing, Kundengewinnung & KI-Implementierung
+- Strategisches Onboarding zur Erarbeitung einer individuellen Strategie (1zu1)
+- Persönlicher Joure Fixe Call (alle zwei Wochen, ca. 30min) mit deinem persönlichen Account Manager zur Klärung offener Fragen und individuellen Anpassung sowie laufender Iteration der besprochenen Methoden
+- Premium Support (Private Chatgruppe) mit den Beratern zur Klärung persönlicher Fragen via Slack
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Persönliches Live-Strategie-Sparring in der Community mit bis zu 10 Calls pro Woche, je nach Bedarf und individuellen Geschäftsherausforderungen
+- Themen werden von den Teilnehmenden eingebracht und situativ diskutiert, darunter:
+1. Positionierung, Agenturaufbau, Marketing & Sales
+- Feinjustierung von Positionierung und Angebotsgestaltung
+- Social-Media-Ausbau, Reichweite- und Sichtbarkeits­fragen
+- Impulse zu ganzheitlichem Marketing & Leadgenerierungs-Strategien
+- Praxisfeedback zu Content-Gestaltung und -Ideen, Marktanalyse und Technik-Setup
+- Holistisches Verkaufen zur planbaren Gewinnung von Neukunden
+- Klärung unternehmerischer Grundlagen- und Alltagsthemen
+2. KI-Prozesse & Voice Agents
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), um präzise und effektive Antworten des AI Voice Agents sicherzustellen
+- Integration des AI Voice Agents in bestehende Systeme wie Telefonie, CRM und andere IT-Infrastrukturen
+- Erstellung individueller Funktionen und Workflows (Custom Functions) mit iPaaS-Tools wie Make.com und n8n
+- Einrichtung und Nutzung von API-Schnittstellen zur Verbindung der Voice Agents mit weiteren Unternehmensanwendungen
+- Design und Optimierung natürlicher und intuitiver Dialogstrukturen für ein verbessertes Kundenerlebnis
+- Grundlagen Rechtliches und DSGVO-konformes Setup
+- Unterstützung bei der Einbindung und Nutzung von Best Practices, Vorlagen und erprobten Frameworks für eine effektive Implementierung
+
+
+Everlast KI-Agentur Kickstart Master
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt Agenturaufbau, Marketing, Kundengewinnung & KI-Implementierung
+- Strategisches Onboarding zur Erarbeitung einer individuellen Strategie (1zu1)
+- Persönlicher Joure Fixe Call (alle zwei Wochen, ca. 30min) mit deinem persönlichen Account Manager zur Klärung offener Fragen und individuellen Anpassung sowie laufender Iteration der besprochenen Methoden
+- Premium Support (Private Chatgruppe) mit den Beratern zur Klärung persönlicher Fragen via Slack
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Persönliches Live-Strategie-Sparring in der Community mit bis zu 15 Calls pro Woche, je nach Bedarf und individuellen Geschäftsherausforderungen
+- Themen werden von den Teilnehmenden eingebracht und situativ diskutiert, darunter:
+1. Positionierung, Agenturaufbau, Marketing & Sales
+- Feinjustierung von Positionierung und Angebotsgestaltung
+- Social-Media-Ausbau, Reichweite- und Sichtbarkeits­fragen
+- Impulse zu ganzheitlichem Marketing & Leadgenerierungs-Strategien
+- Praxisfeedback zu Content-Gestaltung und -Ideen, Marktanalyse und Technik-Setup
+- Holistisches Verkaufen zur planbaren Gewinnung von Neukunden
+- Klärung unternehmerischer Grundlagen- und Alltagsthemen
+2. KI-Prozesse & Voice Agents
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), um präzise und effektive Antworten des AI Voice Agents sicherzustellen
+- Integration des AI Voice Agents in bestehende Systeme wie Telefonie, CRM und andere IT-Infrastrukturen
+- Erstellung individueller Funktionen und Workflows (Custom Functions) mit iPaaS-Tools wie Make.com und n8n
+- Einrichtung und Nutzung von API-Schnittstellen zur Verbindung der Voice Agents mit weiteren Unternehmensanwendungen
+- Design und Optimierung natürlicher und intuitiver Dialogstrukturen für ein verbessertes Kundenerlebnis
+- Grundlagen Rechtliches und DSGVO-konformes Setup
+- Unterstützung bei der Einbindung und Nutzung von Best Practices, Vorlagen und erprobten Frameworks für eine effektive Implementierung
+
+Everlast KI-Agentur Kickstart ScaleUp Mastery
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt Agenturaufbau, Marketing, Kundengewinnung & KI-Implementierung
+- Strategisches Onboarding („Kickoff”) zur Erarbeitung der individuellen Strategie (1zu1 mit einem der leitenden Berater, ca. 60-90min)
+- 6 1zu1-Beratungen (eine Stunde im Monat) mit einem leitenden Berater bzw. Co-Founder von Everlast
+- Persönlicher Joure Fixe Call (alle zwei Wochen, ca. 30min) mit deinem persönlichen Account Manager zur Klärung offener Fragen und individuellen Anpassung sowie laufender Iteration der besprochenen Methoden
+- Premium Support (Private Chatgruppe) mit den Beratern zur Klärung persönlicher Fragen via Slack
+- On-Demand Content- & Resource Hub mit Video-Briefings, Vorlagen und Checklisten
+- Zugang zu Vorlagen und Best Practices: Fertige Frameworks, Templates, bewährte Strategien und Schritt-für-Schritt-Anleitungen für schnelle und effiziente Umsetzung
+- Persönliches Live-Strategie-Sparring in der Community mit bis zu 15 Calls pro Woche, je nach Bedarf und individuellen Geschäftsherausforderungen. Themen werden von den Teilnehmenden eingebracht und situativ diskutiert.
+- Engpasskonzentriertes Arbeiten auf Basis der jeweils wichtigsten Themen im Unternehmen. Unter Anderem:
+1. Positionierung, Agenturaufbau, Marketing & Sales
+- Feinjustierung von Positionierung und Angebotsgestaltung
+- Social-Media-Ausbau, Reichweite- und Sichtbarkeits­fragen
+- Impulse zu ganzheitlichem Marketing & Leadgenerierungs-Strategien
+- Praxisfeedback zu Content-Gestaltung und -Ideen, Marktanalyse und Technik-Setup
+- Holistisches Verkaufen zur planbaren Gewinnung von Neukunden
+- Klärung unternehmerischer Grundlagen- und Alltagsthemen
+2. KI-Prozesse & Voice Agents
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering), um präzise und effektive Antworten (des AI Voice Agents) sicherzustellen
+- Integration von AI Voice Agents in bestehende Systeme wie Telefonie, CRM und andere IT-Infrastrukturen
+- Erstellung individueller Funktionen und Workflows (Custom Functions) mit iPaaS-Tools wie Make.com und n8n
+- Einrichtung und Nutzung von API-Schnittstellen zur Verbindung der KI-Systeme bzw. Voice Agents mit weiteren Unternehmensanwendungen
+- Design und Optimierung natürlicher und intuitiver Dialogstrukturen für ein verbessertes Kundenerlebnis
+- Grundlagen Rechtliches und DSGVO-konformes Setup
+- Unterstützung bei der Einbindung und Nutzung von Best Practices, Vorlagen und erprobten Frameworks für eine effektive Implementierung
+
+
+
+Everlast AI ® KI-Audit
+- 90-minütiges KI-Audit zur Analyse bestehender Vorstellungen und Abgleich mit der technischen Umsetzbarkeit per Videotermin mit einem Senior AI Consultant
+- Bewertung der spezifischen Use Cases: Welche Anforderungen und Fragen müssen geklärt werden? Was ist technisch möglich? Welche Timeline ist realistisch?
+- Engpasskonzentrierte Analyse zur Identifikation weiterer KI-Potenziale und Quick-Wins in den bestehenden Geschäftsprozessen
+- Evaluierung der bestehenden IT-Infrastruktur und Systemlandschaft hinsichtlich KI-Readiness
+- Bewertung nach dem Everlast AI Readiness Score zur Einordnung des aktuellen Reifegrads und Ableitung konkreter nächster Schritte
+- Einordnung in aktuelle Best Practices und bewährte Implementierungsstrategien aus vergleichbaren Projekten und Branchenstandards
+- Erstellung eines Anforderungskatalogs mit klarer Priorisierung der Use Cases nach Umsetzbarkeit und Wertschöpfungspotenzial (Impact-Effort-Matrix)
+- Präsentations-Call zur Vorstellung der Audit-Ergebnisse inkl. konkreter Handlungsempfehlungen und realistischer Umsetzungs-Timeline
+- Dokumentation aller Ergebnisse als Entscheidungsgrundlage für die weitere Zusammenarbeit
+
+Everlast KI-Pionier Beratung
+Everlast KI-PIONIER Beratung
+- 6-monatige individuelle digitale Unternehmensberatung mit dem Schwerpunkt Einführung und Implementierung von KI-Automatisierungen
+- Strategisches Kick-Off („KI-Audit", ca. 90min) zum Beginn der Zusammenarbeit
+- Strategieberatung und beratende Unterstützung bei der Implementierung der gemeinsam im Kick-Off ausgewählten KI-Automatisierungen (Fokusprojekte)
+- Regelmäßige 1:1-Beratung (alle zwei Wochen, ca. 60 min per Zoom) mit dem KI-Entwickler bzw. leitenden Beratern per Videotermin (Zoom), zur Strategie, Umsetzung und Anpassung der besprochenen Maßnahmen.
+- Persönliche Live-Beratung in der Gruppe: Bis zu 3 Calls pro Woche mit KI-Entwicklern und Senior AI Consultants insbesondere zu den wichtigsten Themen in der Implementierung von KI-Agents und AI Voice Agents
+- Erweiterter Zugang für Teammitglieder: Zugang für bis zu 3 weitere Mitarbeiter oder Geschäftspartner, die ebenfalls an der Implementierung teilnehmen können
+- Bonus: E-Learning Plattform mit Kursen zu allen relevanten Themenbereichen, u.A. Digitalisierung, Künstliche Intelligenz, Prompt Engineering, KI-Assistenten uvm.
+- Premium Support (Private Chatgruppe) mit den Beratern via Slack
+- Beratung durch unsere KI-Entwickler und Senior AI Consultants auf Basis der jeweils wichtigsten Themen im Unternehmen (Engpasskonzentriertes Arbeiten). Unter Anderem:
+- Implementierung von KI-Automatisierungen zur Zeit- und Kostenreduktion, u.A. im Bereich - Automatisierung von wiederkehrenden Geschäftsprozessen durch den Einsatz von KI-Workflows
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering) für präzise und effektive Ergebnisse
+- Integration von KI-Tools in bestehende Systeme wie CRM, E-Mail-Marketing und Kundensupport-Plattformen
+- Erstellung individueller Automatisierungs-Workflows zur Reduktion manueller Aufgaben
+Nutzung und Einrichtung vorhandener API-Schnittstellen zur Anbindung relevanter Unternehmenssoftware
+- Optimierung von KI-gestützten Entscheidungsprozessen zur schnelleren und datenbasierten Geschäftssteuerung
+- Identifikation und Behebung technischer Probleme (Troubleshooting) zur Sicherstellung einer reibungslosen Funktion der KI-Automatisierungen
+- Anwendung erprobter Best Practices zur effizienten KI-Implementierung und Skalierung
+Unterstützung bei der Entscheidungsfindung zur Auswahl der richtigen KI-Technologien und - Lösungen basierend auf individuellen Geschäftsanforderungen
+
+Everlast KI-Champion Beratung & Service
+Everlast KI-CHAMPION Beratung & Service 
+- 6-monatige individuelle digitale Unternehmensberatung und Implementierung von KI-Automatisierungen
+- Strategisches Kick-Off („KI-Audit", ca. 90min) zum Beginn der Zusammenarbeit
+- Implementierung der gemeinsam im Kick-Off ausgewählten KI-Automatisierung (Fokusprojekt)
+- Umsetzung des Fokusprojekts durch unsere KI-Entwickler auf Basis der jeweils wichtigsten Themen im Unternehmen (max. 1-2 Fokusprojekte werden umgesetzt, je nach Komplexität). Insbesondere: Implementierung von KI-Automatisierungen zur Zeit- und Kostenreduktion im Bereich KI-Telefonassistenz (AI Voice Agent)
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering) für präzise und effektive Ergebnisse
+- Integration von KI-Tools in bestehende Systeme wie CRM, E-Mail-Marketing und Kundensupport-Plattformen
+- Identifikation und Behebung technischer Probleme (Troubleshooting) zur Sicherstellung einer reibungslosen Funktion der KI-Automatisierungen
+- Erstellung individueller Automatisierungs-Workflows für das Fokusprojekt, Nutzung und Einrichtung vorhandener API-Schnittstellen zur Anbindung relevanter Unternehmenssoftware
+- Strategischer Partner im IT- und KI-Bereich: Kommunikation mit bzw. Koordination von externen Dienstleistern, bspw. zur Bereitstellung von benötigten API-Schnittstellen
+- Regelmäßige 1:1-Beratung (alle zwei Wochen, ca. 30 min per Zoom) mit dem KI-Entwickler bzw. leitenden Beratern per Videotermin, zur Implementierung und Anpassung der besprochenen Maßnahmen.
+- Persönliche Live-Beratung in der Gruppe: Bis zu 3 Calls pro Woche mit KI-Entwicklern und Senior AI Consultants insbesondere zu den wichtigsten Themen in der Implementierung von KI-Agents und AI Voice Agents
+- Erweiterter Zugang für Teammitglieder: Zugang für bis zu 3 weitere Mitarbeiter oder Geschäftspartner, die ebenfalls an der Implementierung teilnehmen können
+- Bonus: E-Learning Plattform mit Kursen zu allen relevanten Themenbereichen, u.A. Digitalisierung, Künstliche Intelligenz, Prompt Engineering, KI-Assistenten uvm.
+- Premium Support (Private Chatgruppe) mit den Beratern via Slack
+- Dauerhafter Zugang zu den umgesetzten Maßnahmen, auch nach Beendigung der Zusammenarbeit. Alle Maßnahmen werden durch Software beim Kunden umgesetzt, der Kunde wird diese entsprechend den Empfehlungen und Abstimmungen bereitstellen.
+- Nach Abschluss des zum Start definierten Fokusprojekts gehen wir engpassbezogene, individuelle Prozessoptimierungen und Automatisierungen an. Die Anzahl der implementierten Module hängt vom Komplexitätsgrad und der Länge der Laufzeit ab.
+
+Beispiele für solche "weiterführenden Module":
+- Setup digitales Datenmanagement & Teamverwaltung (Corporate Workspace)
+- Setup „Paperless-Unternehmen” durch digitales Dokumentenmanagement
+- Setup lokale LLM-Lösung „Private GPT” durch DSGVO-konformen KI-Nutzung
+- Setup interner Chatbots und KI-Agenten
+- Setup KI-Telefonassistenten für alle Inbound-Anfragen und Outbound-Calls
+- Setup Digitale Schulungsplattform für Intern und/oder Kundenbetreuung
+- Setup Automatisierter Upload von Live-Calls in Schulungsbereich oder Ordnern
+- Setup von KI-Assistenten (CustomGPTs) für alle Routine-Text-Aufgaben
+- Setup Automatisiertes internes Mitarbeiter-Reporting (EOD & EOW)
+- Setup digitale Kommunikation (Intern und/oder Kunden)
+- Setup digitales und sicheres Passwortmanagement
+- Setup digitale Terminverwaltung
+- Setup von KI im Kundensupport (Experten-KI, Chatbots, Voiceagents)
+- Setup automatisierter Kunden Onboarding Prozess (Vertrag bis Projektstart) 
+- Setup digitales Bewerbermanagementsystem “Everlast Recruiting”
+- Best Practice Digitalisierter Backoffice-Prozess (Angebot bis Zahlungseingang)
+- Best Practice Digitale Process Map für alle Unternehmensprozesse
+- Best Practice Digitale Dokumentation aller Unternehmensprozesse
+- Best Practice Automatisierter Mitarbeiter Onboarding Prozess (Vertrag bis Einarbeitung)
+- Best Practice CRM Setup auf Basis von Relationflow oder Close
+
+
+Darüber hinaus können wir auch weitere individuelle Module umsetzen, sofern möglich und sinnvoll.
+
+Everlast KI-Exzellenz Beratung & Service
+Everlast KI-Exzellenz Beratung & Service 
+- 12-monatige individuelle digitale Unternehmensberatung und Implementierung von KI-Automatisierungen
+- Strategisches Kick-Off („KI-Audit", ca. 90min) zum Beginn der Zusammenarbeit
+- Implementierung der gemeinsam im Kick-Off ausgewählten KI-Automatisierung (Fokusprojekt)
+- Umsetzung des Fokusprojekts durch unsere KI-Entwickler auf Basis der jeweils wichtigsten Themen im Unternehmen (ca. 3-4 Fokusprojekte werden umgesetzt, je nach Komplexität). Insbesondere: Implementierung von KI-Automatisierungen zur Zeit- und Kostenreduktion im Bereich KI-Telefonassistenz (AI Voice Agent)
+- Entwicklung und Optimierung von Eingabeaufforderungen (Prompt Engineering) für präzise und effektive Ergebnisse
+- Integration von KI-Tools in bestehende Systeme wie CRM, E-Mail-Marketing und Kundensupport-Plattformen
+- Identifikation und Behebung technischer Probleme (Troubleshooting) zur Sicherstellung einer reibungslosen Funktion der KI-Automatisierungen
+- Erstellung individueller Automatisierungs-Workflows für die Fokusprojekte, Nutzung und Einrichtung vorhandener API-Schnittstellen zur Anbindung relevanter Unternehmenssoftware
+- Strategischer Partner im IT- und KI-Bereich: Kommunikation mit bzw. Koordination von externen Dienstleistern, bspw. zur Bereitstellung von benötigten API-Schnittstellen
+- Regelmäßige 1:1-Beratung (alle zwei Wochen, ca. 60 min per Zoom) mit dem KI-Entwickler bzw. leitenden Beratern per Videotermin, zur Implementierung und Anpassung der besprochenen Maßnahmen.
+- Persönliche Live-Beratung in der Gruppe: Bis zu 3 Calls pro Woche mit KI-Entwicklern und Senior AI Consultants insbesondere zu den wichtigsten Themen in der Implementierung von KI-Agents und AI Voice Agents
+- Erweiterter Zugang für Teammitglieder: Zugang für bis zu 6 weitere Mitarbeiter oder Geschäftspartner, die ebenfalls an der Implementierung teilnehmen können
+- Bonus: E-Learning Plattform mit Kursen zu allen relevanten Themenbereichen, u.A. Digitalisierung, Künstliche Intelligenz, Prompt Engineering, KI-Assistenten uvm.
+- Premium Support (Private Chatgruppe) mit den Beratern via Slack
+- Dauerhafter Zugang zu den umgesetzten Maßnahmen, auch nach Beendigung der Zusammenarbeit. Alle Maßnahmen werden durch Software beim Kunden umgesetzt, der Kunde wird diese entsprechend den Empfehlungen und Abstimmungen bereitstellen.
+- Nach Abschluss des zum Start definierten Fokusprojekts gehen wir engpassbezogene, individuelle Prozessoptimierungen und Automatisierungen an. Die Anzahl der implementierten Module hängt vom Komplexitätsgrad und der Länge der Laufzeit ab.
+
+Beispiele für solche "weiterführenden Module":
+- Setup digitales Datenmanagement & Teamverwaltung (Corporate Workspace)
+- Setup „Paperless-Unternehmen” durch digitales Dokumentenmanagement
+- Setup lokale LLM-Lösung „Private GPT” durch DSGVO-konformen KI-Nutzung
+- Setup interner Chatbots und KI-Agenten
+- Setup KI-Telefonassistenten für alle Inbound-Anfragen und Outbound-Calls
+- Setup Digitale Schulungsplattform für Intern und/oder Kundenbetreuung
+- Setup Automatisierter Upload von Live-Calls in Schulungsbereich oder Ordnern
+- Setup von KI-Assistenten (CustomGPTs) für alle Routine-Text-Aufgaben
+- Setup Automatisiertes internes Mitarbeiter-Reporting (EOD & EOW)
+- Setup digitale Kommunikation (Intern und/oder Kunden)
+- Setup digitales und sicheres Passwortmanagement
+- Setup digitale Terminverwaltung
+- Setup von KI im Kundensupport (Experten-KI, Chatbots, Voiceagents)
+- Setup automatisierter Kunden Onboarding Prozess (Vertrag bis Projektstart) 
+- Setup digitales Bewerbermanagementsystem “Everlast Recruiting”
+- Best Practice Digitalisierter Backoffice-Prozess (Angebot bis Zahlungseingang)
+- Best Practice Digitale Process Map für alle Unternehmensprozesse
+- Best Practice Digitale Dokumentation aller Unternehmensprozesse
+- Best Practice Automatisierter Mitarbeiter Onboarding Prozess (Vertrag bis Einarbeitung)
+- Best Practice CRM Setup auf Basis von Relationflow oder Close
+
+Darüber hinaus können wir auch weitere individuelle Module umsetzen, sofern möglich und sinnvoll
