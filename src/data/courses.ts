@@ -62,7 +62,7 @@ Du wirst lernen, wie du:
     price: 997,
     status: "available",
     badge: "JETZT VERFÜGBAR",
-    image: "/courses/ki-automatisierung.jpg",
+    image: "/images/course_ki_automatisierung.jpg",
     features: [
       "30+ Video-Lektionen",
       "Praxis-Projekte zum Mitmachen",
@@ -196,7 +196,7 @@ Du wirst lernen, wie du:
     price: null,
     status: "coming-soon",
     badge: "BALD VERFÜGBAR",
-    image: "/courses/prompt-engineering.jpg",
+    image: "/images/course_prompt_engineering.jpg",
     features: [
       "Fortgeschrittene Techniken",
       "System Prompts meistern",
@@ -237,7 +237,7 @@ Du wirst lernen, wie du:
     price: null,
     status: "coming-soon",
     badge: "BALD VERFÜGBAR",
-    image: "/courses/voice-agents.jpg",
+    image: "/images/course_voice_agents.jpg",
     features: [
       "Realtime Voice AI",
       "Integration Guide",
@@ -278,7 +278,7 @@ Du wirst lernen, wie du:
     price: null,
     status: "coming-soon",
     badge: "BALD VERFÜGBAR",
-    image: "/courses/rag-llm.jpg",
+    image: "/images/course_rag_llm.jpg",
     features: [
       "Vector Databases",
       "LangChain Framework",

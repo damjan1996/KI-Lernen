@@ -15,22 +15,23 @@ export default function ImpressumPage() {
           <CardContent className="pt-6 prose prose-invert max-w-none">
             <h2>Angaben gemäß § 5 TMG</h2>
             <p>
-              <strong>KI Lernen</strong>
+              <strong>Everlast Consulting GmbH</strong>
               <br />
-              [Name des Inhabers]
+              Geschäftsführer: Viktor Schöck
               <br />
-              [Straße und Hausnummer]
-              <br />
-              [PLZ Ort]
+              Ulm
               <br />
               Deutschland
+            </p>
+            <p className="text-sm text-[var(--text-muted)]">
+              Gründer: Marvin Schienbein, Leonard Schmedding
+              <br />
+              Gesellschafter: Marvin Schienbein, Leonard Schmedding, Stevo Topic
             </p>
 
             <h2>Kontakt</h2>
             <p>
-              Telefon: [Telefonnummer]
-              <br />
-              E-Mail: kontakt@kilernen.de
+              E-Mail: kontakt@everlast-consulting.de
             </p>
 
             <h2>Umsatzsteuer-ID</h2>
@@ -38,7 +39,7 @@ export default function ImpressumPage() {
               Umsatzsteuer-Identifikationsnummer gemäß § 27 a
               Umsatzsteuergesetz:
               <br />
-              DE [Nummer]
+              [auf Anfrage]
             </p>
 
             <h2>EU-Streitschlichtung</h2>

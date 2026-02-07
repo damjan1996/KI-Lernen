@@ -1,32 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle, Lock, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { courses } from "@/data/courses";
+import { FadeIn } from "@/components/ui/motion";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
 export default function CheckoutPage({ params }: PageProps) {
+  const { slug } = use(params);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [resolvedParams, setResolvedParams] = useState<{ slug: string } | null>(null);
 
-  // Resolve params
-  if (!resolvedParams) {
-    params.then(setResolvedParams);
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse text-[var(--text-secondary)]">Laden...</div>
-      </div>
-    );
-  }
-
-  const course = courses.find((c) => c.slug === resolvedParams.slug);
+  const course = courses.find((c) => c.slug === slug);
 
   if (!course) {
     return (
@@ -96,6 +87,7 @@ export default function CheckoutPage({ params }: PageProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Order Summary */}
+          <FadeIn delay={0}>
           <div>
             <h1 className="text-3xl font-bold mb-6">Bestellung abschließen</h1>
 
@@ -145,8 +137,10 @@ export default function CheckoutPage({ params }: PageProps) {
               </div>
             </div>
           </div>
+          </FadeIn>
 
           {/* Payment Section */}
+          <FadeIn delay={0.2} direction="left">
           <div>
             <Card className="border-gradient">
               <CardContent className="pt-6">
@@ -221,6 +215,7 @@ export default function CheckoutPage({ params }: PageProps) {
               </CardContent>
             </Card>
           </div>
+          </FadeIn>
         </div>
       </div>
     </div>

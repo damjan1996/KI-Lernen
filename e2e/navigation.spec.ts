@@ -12,7 +12,6 @@ test.describe("Header Navigation", () => {
   });
 
   test("should display desktop navigation links", async ({ page }) => {
-    // Skip on mobile
     const viewportSize = page.viewportSize();
     if (viewportSize && viewportSize.width < 768) {
       test.skip();
@@ -20,12 +19,11 @@ test.describe("Header Navigation", () => {
     }
 
     await expect(page.locator("header").getByRole("link", { name: "Kurse" }).first()).toBeVisible();
+    await expect(page.locator("header").getByRole("link", { name: "Beratung" })).toBeVisible();
     await expect(page.locator("header").getByRole("link", { name: "Über uns" })).toBeVisible();
-    await expect(page.locator("header").getByRole("link", { name: "FAQ" })).toBeVisible();
   });
 
   test("should navigate to Kurse page from header", async ({ page }) => {
-    // Skip on mobile
     const viewportSize = page.viewportSize();
     if (viewportSize && viewportSize.width < 768) {
       test.skip();
@@ -36,8 +34,29 @@ test.describe("Header Navigation", () => {
     await expect(page).toHaveURL("/kurse");
   });
 
+  test("should navigate to Beratung page from header", async ({ page }) => {
+    const viewportSize = page.viewportSize();
+    if (viewportSize && viewportSize.width < 768) {
+      test.skip();
+      return;
+    }
+
+    await page.locator("header").getByRole("link", { name: "Beratung" }).click();
+    await expect(page).toHaveURL("/beratung");
+  });
+
+  test("should navigate to Über uns page from header", async ({ page }) => {
+    const viewportSize = page.viewportSize();
+    if (viewportSize && viewportSize.width < 768) {
+      test.skip();
+      return;
+    }
+
+    await page.locator("header").getByRole("link", { name: "Über uns" }).click();
+    await expect(page).toHaveURL("/ueber-uns");
+  });
+
   test("should display Login and CTA buttons on desktop", async ({ page }) => {
-    // Skip on mobile
     const viewportSize = page.viewportSize();
     if (viewportSize && viewportSize.width < 768) {
       test.skip();
@@ -49,7 +68,6 @@ test.describe("Header Navigation", () => {
   });
 
   test("should navigate to Login page", async ({ page }) => {
-    // Skip on mobile
     const viewportSize = page.viewportSize();
     if (viewportSize && viewportSize.width < 768) {
       test.skip();
@@ -60,9 +78,7 @@ test.describe("Header Navigation", () => {
     await expect(page).toHaveURL("/login");
   });
 
-  // Skip on mobile - scroll behavior varies by viewport and page content height
   test("should change header background on scroll", async ({ page }) => {
-    // This test is flaky on mobile viewports due to page height constraints
     const viewport = await page.viewportSize();
     if ((viewport?.width ?? 1024) < 768) {
       test.skip();
@@ -74,14 +90,14 @@ test.describe("Header Navigation", () => {
     // Initially transparent
     await expect(header).toHaveClass(/bg-transparent/);
 
-    // Scroll down - the header changes when scrollY > 10
-    await page.evaluate(() => {
-      window.scrollTo({ top: 500, behavior: "instant" });
-      window.dispatchEvent(new Event("scroll"));
-    });
+    // Scroll down using mouse wheel for reliable scroll event
+    await page.mouse.wheel(0, 500);
 
-    // Wait for the React state to update and class to change
-    await expect(header).not.toHaveClass(/bg-transparent/, { timeout: 5000 });
+    // Wait for scroll position to update and React state to respond
+    await page.waitForFunction(() => window.scrollY > 10, null, { timeout: 10000 });
+
+    // Wait for the React state to update
+    await expect(header).not.toHaveClass(/bg-transparent/, { timeout: 10000 });
   });
 });
 
@@ -93,34 +109,41 @@ test.describe("Mobile Navigation", () => {
   });
 
   test("should display mobile menu button", async ({ page }) => {
-    const menuButton = page.locator("header button.md\\:hidden");
+    const menuButton = page.locator('header button[aria-label]');
     await expect(menuButton).toBeVisible();
   });
 
   test("should open and close mobile menu", async ({ page }) => {
-    const menuButton = page.locator("header button").first();
+    const menuButton = page.locator('header button[aria-label]');
 
     // Open menu
     await menuButton.click();
     await expect(page.locator("header").getByRole("link", { name: "Kurse" }).first()).toBeVisible();
+    await expect(page.locator("header").getByRole("link", { name: "Beratung" })).toBeVisible();
     await expect(page.locator("header").getByRole("link", { name: "Über uns" })).toBeVisible();
-    await expect(page.locator("header").getByRole("link", { name: "FAQ" })).toBeVisible();
 
     // Close menu
     await menuButton.click();
-    // Navigation links should be hidden (in mobile collapsed state)
-    await page.waitForTimeout(100);
+    await page.waitForTimeout(400); // Wait for animation
   });
 
   test("should navigate from mobile menu", async ({ page }) => {
-    const menuButton = page.locator("header button").first();
+    const menuButton = page.locator('header button[aria-label]');
 
     // Open menu
     await menuButton.click();
 
-    // Click Login link
-    await page.locator("header").getByRole("link", { name: "Login" }).click();
-    await expect(page).toHaveURL("/login");
+    // Click Kurse link
+    await page.locator("header").getByRole("link", { name: "Kurse" }).first().click();
+    await expect(page).toHaveURL("/kurse");
+  });
+
+  test("should show Login button in mobile menu", async ({ page }) => {
+    const menuButton = page.locator('header button[aria-label]');
+    await menuButton.click();
+
+    await expect(page.locator("header").getByRole("link", { name: "Login" })).toBeVisible();
+    await expect(page.locator("header").getByRole("link", { name: "Kurse entdecken" })).toBeVisible();
   });
 });
 
@@ -139,18 +162,18 @@ test.describe("Footer Navigation", () => {
   });
 
   test("should display Kurse section with links", async ({ page }) => {
-    await expect(page.locator("footer").getByText("Kurse", { exact: false }).first()).toBeVisible();
+    await expect(page.locator("footer").getByText("Kurse", { exact: true }).first()).toBeVisible();
     await expect(page.locator("footer").getByRole("link", { name: "KI-Automatisierung" })).toBeVisible();
     await expect(page.locator("footer").getByRole("link", { name: "Prompt Engineering" })).toBeVisible();
     await expect(page.locator("footer").getByRole("link", { name: "Voice Agents" })).toBeVisible();
     await expect(page.locator("footer").getByRole("link", { name: "RAG & LLM" })).toBeVisible();
   });
 
-  test("should display Ressourcen section with links", async ({ page }) => {
-    await expect(page.locator("footer").getByText("Ressourcen")).toBeVisible();
-    await expect(page.locator("footer").getByRole("link", { name: "Blog" })).toBeVisible();
+  test("should display Unternehmen section with links", async ({ page }) => {
+    await expect(page.locator("footer").getByText("Unternehmen")).toBeVisible();
+    await expect(page.locator("footer").getByRole("link", { name: "Über uns" })).toBeVisible();
+    await expect(page.locator("footer").getByRole("link", { name: "Beratung" })).toBeVisible();
     await expect(page.locator("footer").getByRole("link", { name: "YouTube" })).toBeVisible();
-    await expect(page.locator("footer").getByRole("link", { name: "Community" })).toBeVisible();
   });
 
   test("should display Rechtliches section with links", async ({ page }) => {
@@ -176,7 +199,7 @@ test.describe("Footer Navigation", () => {
   });
 
   test("should have WhatsApp contact button", async ({ page }) => {
-    const whatsappButton = page.locator("footer a").filter({ hasText: /WhatsApp/ });
+    const whatsappButton = page.locator("a").filter({ hasText: /WhatsApp/ });
     await expect(whatsappButton).toBeVisible();
     await expect(whatsappButton).toHaveAttribute("href", /wa\.me/);
     await expect(whatsappButton).toHaveAttribute("target", "_blank");
@@ -192,17 +215,14 @@ test.describe("Page Navigation Flow", () => {
   test("should navigate from homepage to kurse and back", async ({ page }) => {
     await page.goto("/");
 
-    // On mobile, use mobile menu; on desktop, use header link
     const viewport = await page.viewportSize();
     const isMobile = (viewport?.width ?? 1024) < 768;
 
     if (isMobile) {
-      // Mobile: open menu (button in header with md:hidden class)
-      const mobileMenuButton = page.locator("header button.md\\:hidden");
+      const mobileMenuButton = page.locator('header button[aria-label]');
       await mobileMenuButton.click();
-      await page.getByRole("link", { name: "Kurse" }).first().click();
+      await page.locator("header").getByRole("link", { name: "Kurse" }).first().click();
     } else {
-      // Desktop: click header link
       await page.locator("header").getByRole("link", { name: "Kurse entdecken" }).click();
     }
     await expect(page).toHaveURL("/kurse");
@@ -231,47 +251,36 @@ test.describe("Page Navigation Flow", () => {
   test("should navigate to course detail page", async ({ page }) => {
     await page.goto("/kurse");
 
-    // Check if there are course cards/links
-    const courseLink = page.locator("a[href*='/kurse/']").first();
-
-    if (await courseLink.isVisible()) {
-      await courseLink.click();
-      await expect(page).toHaveURL(/\/kurse\/.+/);
-    }
+    const courseLink = page.getByRole("link", { name: /Zum Kurs/i }).first();
+    await expect(courseLink).toBeVisible({ timeout: 10000 });
+    await courseLink.click();
+    await expect(page).toHaveURL(/\/kurse\/.+/);
   });
 
-  test("should handle anchor links for Über uns section", async ({ page }) => {
+  test("should navigate to Über uns page", async ({ page }) => {
     await page.goto("/");
 
-    // Skip on mobile
     const viewportSize = page.viewportSize();
     if (viewportSize && viewportSize.width < 768) {
       test.skip();
       return;
     }
 
-    // Click Über uns link (anchor link)
     await page.locator("header").getByRole("link", { name: "Über uns" }).click();
-
-    // Should stay on homepage with hash
-    await expect(page).toHaveURL(/#ueber-uns/);
+    await expect(page).toHaveURL("/ueber-uns");
   });
 
-  test("should handle anchor links for FAQ section", async ({ page }) => {
+  test("should navigate to Beratung page", async ({ page }) => {
     await page.goto("/");
 
-    // Skip on mobile
     const viewportSize = page.viewportSize();
     if (viewportSize && viewportSize.width < 768) {
       test.skip();
       return;
     }
 
-    // Click FAQ link (anchor link)
-    await page.locator("header").getByRole("link", { name: "FAQ" }).click();
-
-    // Should stay on homepage with hash
-    await expect(page).toHaveURL(/#faq/);
+    await page.locator("header").getByRole("link", { name: "Beratung" }).click();
+    await expect(page).toHaveURL("/beratung");
   });
 });
 

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Mail, Lock, Eye, EyeOff } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { FadeIn } from "@/components/ui/motion";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,21 +25,28 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-16 flex items-center justify-center bg-gradient-to-b from-[var(--background-secondary)] to-[var(--background-primary)]">
-      <div className="mx-auto max-w-md w-full px-4 sm:px-6">
-        <div className="text-center mb-8">
-          <Link href="/" className="inline-flex items-center gap-2 mb-6">
-            <span className="text-2xl font-bold">
-              <span className="text-[var(--accent-gold)]">KI</span>
-              <span>Lernen</span>
-            </span>
-          </Link>
-          <h1 className="text-3xl font-bold mb-2">Willkommen zurück</h1>
-          <p className="text-[var(--text-secondary)]">
-            Melde dich an, um auf deine Kurse zuzugreifen
-          </p>
-        </div>
+    <div className="min-h-screen pt-24 pb-16 flex items-center justify-center bg-gradient-to-b from-[var(--background-secondary)] to-[var(--background-primary)] relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/3 -left-32 w-64 h-64 rounded-full bg-[var(--accent-gold)]/5 blur-3xl animate-float" />
+        <div className="absolute bottom-1/3 -right-32 w-64 h-64 rounded-full bg-[var(--accent-blue)]/5 blur-3xl animate-float" style={{ animationDelay: "1.5s" }} />
+      </div>
+      <div className="mx-auto max-w-md w-full px-4 sm:px-6 relative">
+        <FadeIn delay={0}>
+          <div className="text-center mb-8">
+            <Link href="/" className="inline-flex items-center gap-2 mb-6">
+              <span className="text-2xl font-bold">
+                <span className="text-[var(--accent-gold)]">KI</span>
+                <span>Lernen</span>
+              </span>
+            </Link>
+            <h1 className="text-3xl font-bold mb-2">Willkommen zurück</h1>
+            <p className="text-[var(--text-secondary)]">
+              Melde dich an, um auf deine Kurse zuzugreifen
+            </p>
+          </div>
+        </FadeIn>
 
+        <FadeIn delay={0.2}>
         <Card className="border-gradient">
           <CardContent className="pt-6">
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -160,7 +168,9 @@ export default function LoginPage() {
             </div>
           </CardContent>
         </Card>
+        </FadeIn>
 
+        <FadeIn delay={0.3}>
         <p className="text-xs text-[var(--text-muted)] text-center mt-6">
           Mit der Anmeldung akzeptierst du unsere{" "}
           <Link href="/agb" className="underline hover:text-[var(--text-secondary)]">
@@ -172,6 +182,7 @@ export default function LoginPage() {
           </Link>
           .
         </p>
+        </FadeIn>
       </div>
     </div>
   );

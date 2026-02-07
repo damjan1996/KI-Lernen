@@ -23,12 +23,12 @@ const footerLinks: Record<string, FooterSection> = {
       { name: "RAG & LLM", href: "/kurse/rag-llm", comingSoon: true },
     ],
   },
-  ressourcen: {
-    title: "Ressourcen",
+  unternehmen: {
+    title: "Unternehmen",
     links: [
-      { name: "Blog", href: "/blog" },
-      { name: "YouTube", href: "https://youtube.com/@kilernen", external: true },
-      { name: "Community", href: "/community" },
+      { name: "Über uns", href: "/ueber-uns" },
+      { name: "Beratung", href: "/beratung" },
+      { name: "YouTube", href: "https://youtube.com/@EverlastAI", external: true },
     ],
   },
   rechtliches: {
@@ -46,9 +46,9 @@ export function Footer() {
     <footer className="bg-[var(--background-secondary)] border-t border-[var(--border-subtle)]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
               <span className="text-xl font-bold text-[var(--text-primary)]">
                 KI

@@ -234,3 +234,60 @@ export function RevealText({ children, delay = 0, ...props }: RevealTextProps) {
     </motion.div>
   );
 }
+
+// Floating Element - Gentle idle y-oscillation animation
+interface FloatingElementProps extends HTMLMotionProps<"div"> {
+  children: ReactNode;
+  amplitude?: number;
+  duration?: number;
+}
+
+export function FloatingElement({
+  children,
+  amplitude = 8,
+  duration = 4,
+  ...props
+}: FloatingElementProps) {
+  return (
+    <motion.div
+      animate={{
+        y: [-amplitude, amplitude, -amplitude],
+      }}
+      transition={{
+        duration,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+// Glow On Hover - Gold glow shadow effect on hover
+interface GlowOnHoverProps extends HTMLMotionProps<"div"> {
+  children: ReactNode;
+  glowColor?: string;
+}
+
+export function GlowOnHover({
+  children,
+  glowColor = "rgba(201, 168, 97, 0.15)",
+  ...props
+}: GlowOnHoverProps) {
+  return (
+    <motion.div
+      whileHover={{
+        boxShadow: `0 0 30px ${glowColor}, 0 0 60px ${glowColor}`,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeOut",
+      }}
+      {...props}
+    >
+      {children}
+    </motion.div>
+  );
+}

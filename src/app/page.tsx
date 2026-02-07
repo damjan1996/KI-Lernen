@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Award, BookOpen, Zap, CheckCircle, Clock } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Award, BookOpen, Zap, CheckCircle, Clock, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -51,6 +52,7 @@ const courses = [
     price: 997,
     status: "available",
     badge: "JETZT VERFÜGBAR",
+    image: "/images/course_ki_automatisierung.jpg",
     features: [
       "30+ Video-Lektionen",
       "Praxis-Projekte",
@@ -66,6 +68,7 @@ const courses = [
       "Meistere die Kunst des Prompt Engineerings und hole das Maximum aus KI-Modellen wie ChatGPT und Claude heraus.",
     status: "coming-soon",
     badge: "BALD VERFÜGBAR",
+    image: "/images/course_prompt_engineering.jpg",
     features: [
       "Fortgeschrittene Techniken",
       "System Prompts",
@@ -80,6 +83,7 @@ const courses = [
       "Entwickle intelligente Sprach-Agenten mit modernsten KI-Technologien für Kundenservice und Automatisierung.",
     status: "coming-soon",
     badge: "BALD VERFÜGBAR",
+    image: "/images/course_voice_agents.jpg",
     features: [
       "Realtime Voice AI",
       "Integration Guide",
@@ -94,6 +98,7 @@ const courses = [
       "Baue leistungsstarke RAG-Systeme und lerne, wie du LLMs in Unternehmensanwendungen integrierst.",
     status: "coming-soon",
     badge: "BALD VERFÜGBAR",
+    image: "/images/course_rag_llm.jpg",
     features: [
       "Vector Databases",
       "LangChain",
@@ -187,47 +192,31 @@ export default function HomePage() {
               </FadeIn>
             </div>
 
-            {/* Right: Hero Video Placeholder */}
+            {/* Right: Hero Image */}
             <FadeIn delay={0.4} direction="left">
               <div className="relative">
-                {/* Video Container with Glow Effect */}
+                {/* Image Container with Glow Effect */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-[var(--accent-gold)]/20 to-[var(--accent-blue)]/20 rounded-2xl blur-xl opacity-50" />
-                <div className="relative aspect-video rounded-2xl overflow-hidden border border-[var(--border-default)] bg-[var(--background-card)] shadow-2xl">
-                  {/* Video Placeholder Background */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[var(--background-tertiary)] to-[var(--background-secondary)]" />
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--border-default)] shadow-2xl">
+                  <Image
+                    src="/images/leonard_tech_office.jpg"
+                    alt="Leonard im Tech Office - KI Experte"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-primary)]/60 via-transparent to-transparent" />
 
-                  {/* Placeholder Pattern */}
-                  <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0" style={{
-                      backgroundImage: 'radial-gradient(circle at 2px 2px, var(--text-muted) 1px, transparent 0)',
-                      backgroundSize: '24px 24px'
-                    }} />
-                  </div>
-
-                  {/* Play Button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <button className="group relative flex items-center justify-center w-20 h-20 rounded-full bg-[var(--accent-gold)] hover:bg-[var(--accent-gold-hover)] transition-all duration-300 hover:scale-110 shadow-lg shadow-[var(--accent-gold)]/25">
-                      <div className="absolute inset-0 rounded-full bg-[var(--accent-gold)] animate-ping opacity-25" />
-                      <svg className="w-8 h-8 text-[var(--background-primary)] ml-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </button>
-                  </div>
-
-                  {/* Video Duration Badge */}
-                  <div className="absolute bottom-4 right-4 px-3 py-1 rounded-md bg-[var(--background-primary)]/80 backdrop-blur-sm text-sm font-medium text-[var(--text-primary)]">
-                    2:34
-                  </div>
-
-                  {/* Video Title Overlay */}
-                  <div className="absolute bottom-4 left-4 right-20">
-                    <p className="text-sm text-[var(--text-secondary)]">Kursvorschau</p>
-                    <p className="text-base font-semibold text-[var(--text-primary)] truncate">Entdecke die Macht der KI-Automatisierung</p>
+                  {/* Text Overlay */}
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <p className="text-sm text-[var(--text-secondary)]">Dein Experte</p>
+                    <p className="text-lg font-semibold text-[var(--text-primary)]">Leonard - KI & Automatisierung</p>
                   </div>
                 </div>
 
                 {/* Floating Stats Badge */}
-                <div className="absolute -bottom-6 -left-6 px-4 py-3 rounded-xl bg-[var(--background-card)] border border-[var(--border-default)] shadow-xl">
+                <div className="absolute -bottom-6 -right-6 px-4 py-3 rounded-xl bg-[var(--background-card)] border border-[var(--border-default)] shadow-xl hidden sm:flex">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-[var(--success)]/10 flex items-center justify-center">
                       <CheckCircle className="w-5 h-5 text-[var(--success)]" />
@@ -316,8 +305,110 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Expert Section */}
+      <section className="py-20 md:py-28 bg-[var(--background-secondary)]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4">
+              Dein Experte
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Lerne von einem <span className="text-[var(--accent-gold)]">Praktiker</span>
+            </h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              Mit jahrelanger Erfahrung in KI-Implementierung und Automatisierung
+              bringe ich dir praxiserprobtes Wissen bei.
+            </p>
+          </FadeIn>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Image Grid */}
+            <FadeIn delay={0.2}>
+              <div className="grid grid-cols-2 gap-4">
+                {/* Main Portrait */}
+                <div className="col-span-2 relative aspect-[16/9] rounded-2xl overflow-hidden border border-[var(--border-default)] shadow-xl">
+                  <Image
+                    src="/images/leonard_keynote_speaker.jpg"
+                    alt="Leonard als Keynote Speaker"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-primary)]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <p className="text-sm font-medium text-[var(--accent-gold)]">Keynote Speaker</p>
+                    <p className="text-white font-semibold">The Future of AI</p>
+                  </div>
+                </div>
+
+                {/* Secondary Images */}
+                <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--border-default)] shadow-lg">
+                  <Image
+                    src="/images/leonard_business_portrait.jpg"
+                    alt="Leonard Business Portrait"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative aspect-[3/4] rounded-xl overflow-hidden border border-[var(--border-default)] shadow-lg">
+                  <Image
+                    src="/images/leonard_casual_professional.jpg"
+                    alt="Leonard Casual Professional"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Right: Content */}
+            <FadeIn delay={0.4} direction="left">
+              <div className="space-y-6">
+                <h3 className="text-2xl md:text-3xl font-bold">
+                  Hi, ich bin Leonard
+                </h3>
+                <p className="text-[var(--text-secondary)] text-lg">
+                  Als KI-Spezialist und Automatisierungsexperte habe ich in den letzten Jahren
+                  zahlreiche Unternehmen dabei unterstützt, ihre Prozesse mit künstlicher
+                  Intelligenz zu transformieren.
+                </p>
+                <p className="text-[var(--text-secondary)]">
+                  Meine Kurse basieren auf echten Projekterfahrungen - keine trockene Theorie,
+                  sondern praxiserprobte Methoden, die du sofort anwenden kannst.
+                </p>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-4 py-6">
+                  <div className="text-center p-4 rounded-xl bg-[var(--background-tertiary)]">
+                    <Users className="w-6 h-6 text-[var(--accent-gold)] mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-[var(--accent-gold)]">500+</div>
+                    <div className="text-xs text-[var(--text-muted)]">Kursteilnehmer</div>
+                  </div>
+                  <div className="text-center p-4 rounded-xl bg-[var(--background-tertiary)]">
+                    <Award className="w-6 h-6 text-[var(--accent-gold)] mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-[var(--accent-gold)]">50+</div>
+                    <div className="text-xs text-[var(--text-muted)]">Projekte</div>
+                  </div>
+                  <div className="text-center p-4 rounded-xl bg-[var(--background-tertiary)]">
+                    <Star className="w-6 h-6 text-[var(--accent-gold)] mx-auto mb-2" />
+                    <div className="text-2xl font-bold text-[var(--accent-gold)]">5.0</div>
+                    <div className="text-xs text-[var(--text-muted)]">Bewertung</div>
+                  </div>
+                </div>
+
+                <Button size="lg" asChild>
+                  <Link href="/kurse">
+                    Meine Kurse entdecken
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* Courses Section */}
-      <section id="kurse" className="py-20 md:py-28 bg-[var(--background-secondary)]">
+      <section id="kurse" className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -338,33 +429,17 @@ export default function HomePage() {
                       course.status === "coming-soon" ? "opacity-80" : ""
                     }`}
                   >
-                    {/* Course Image Placeholder */}
-                    <div className="relative w-full aspect-[21/9] overflow-hidden bg-gradient-to-br from-[var(--background-tertiary)] to-[var(--background-secondary)]">
-                      {/* Decorative Background Pattern */}
-                      <div className="absolute inset-0">
-                        <div className="absolute inset-0 opacity-10" style={{
-                          backgroundImage: 'radial-gradient(circle at 2px 2px, var(--text-muted) 1px, transparent 0)',
-                          backgroundSize: '16px 16px'
-                        }} />
-                      </div>
-
-                      {/* Course Visual Elements */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="relative">
-                          {/* Glowing Orb */}
-                          <div className={`absolute inset-0 ${course.status === "available" ? 'bg-[var(--accent-gold)]' : 'bg-[var(--accent-blue)]'} rounded-full blur-2xl opacity-20 scale-150`} />
-                          {/* Icon Container */}
-                          <div className={`relative w-16 h-16 rounded-2xl ${course.status === "available" ? 'bg-[var(--accent-gold)]/20' : 'bg-[var(--accent-blue)]/20'} flex items-center justify-center`}>
-                            {index === 0 && <Zap className={`w-8 h-8 ${course.status === "available" ? 'text-[var(--accent-gold)]' : 'text-[var(--accent-blue)]'}`} />}
-                            {index === 1 && <BookOpen className="w-8 h-8 text-[var(--accent-blue)]" />}
-                            {index === 2 && <Award className="w-8 h-8 text-[var(--accent-blue)]" />}
-                            {index === 3 && <BookOpen className="w-8 h-8 text-[var(--accent-blue)]" />}
-                          </div>
-                        </div>
-                      </div>
+                    {/* Course Image */}
+                    <div className="relative w-full aspect-[16/9] overflow-hidden">
+                      <Image
+                        src={course.image}
+                        alt={course.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
 
                       {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-card)] via-transparent to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[var(--background-card)] via-transparent to-transparent transition-transform duration-500 group-hover:scale-105" />
 
                       {/* Badge positioned on image */}
                       <div className="absolute top-4 left-4">
